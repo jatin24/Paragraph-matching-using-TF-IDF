@@ -1,0 +1,511 @@
+import java.util.*;
+import java.io.*;
+public class demo2
+{	
+	public static void main(String args[])
+	{
+		String s="",w="";
+		int i=8,j=0,parah=0;
+		String path;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the path : ");
+		path=sc.nextLine();
+		int a[]=new int[5];
+		ArrayList l=new ArrayList();
+		ArrayList m=new ArrayList();
+		ArrayList n=new ArrayList();
+		ArrayList p=new ArrayList();
+		ArrayList q=new ArrayList();
+		ArrayList r=new ArrayList();
+		ArrayList x=new ArrayList();
+		ArrayList y=new ArrayList();
+		File f1=new File(path);
+		try
+		{
+			FileReader fr1=new FileReader(f1);
+			BufferedReader br1= new BufferedReader(fr1);
+			while((s=br1.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					parah++;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		System.out.println("parah : "+parah);
+		//PARAH COUNTED
+		File f=new File(path);
+		try
+		{
+			FileReader fr=new FileReader(f);
+			BufferedReader br= new BufferedReader(fr);
+			//1
+			j=0;
+			while((s=br.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+				else
+				{
+					i=0;
+					while(i<s.length())
+					{
+						char c=s.charAt(i);
+						if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+							w=w+c;
+						else
+						{
+							if(w!="")
+			        		{
+			        			l.add(j,w);
+			       				j++;
+			       				w="";
+			       			}
+						}
+						i++;
+					}
+				}
+			}
+			System.out.println(l);
+			//2
+			j=0;
+			while((s=br.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+				else
+				{
+					i=0;
+					while(i<s.length())
+					{
+						char c=s.charAt(i);
+						if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+							w=w+c;
+						else
+						{
+							if(w!="")
+			        		{
+			        			m.add(j,w);
+			       				j++;
+			       				w="";
+			       			}
+						}
+						i++;
+					}
+				}
+			}
+			System.out.println(m);
+			//3
+			j=0;
+			while((s=br.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+				else
+				{
+					i=0;
+					while(i<s.length())
+					{
+						char c=s.charAt(i);
+						if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+							w=w+c;
+						else
+						{
+							if(w!="")
+			        		{
+			        			n.add(j,w);
+			       				j++;
+			       				w="";
+			       			}
+						}
+						i++;
+					}
+				}
+			}
+			System.out.println(n);
+			//4
+			if(parah==4)
+			{
+				j=0;
+				while((s=br.readLine())!=null)
+				{
+					s=s.toLowerCase();
+					if(s.equals(""))
+					{
+						break;
+					}
+					else if(s.equals("************************************************************"))
+					{
+						break;
+					}
+					else
+					{
+						i=0;
+						while(i<s.length())
+						{
+							char c=s.charAt(i);
+							if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+								w=w+c;
+							else
+							{
+								if(w!="")
+				        		{
+				        			x.add(j,w);
+				       				j++;
+				       				w="";
+				       			}
+							}
+							i++;
+						}
+					}
+				}
+				System.out.println(x);
+			}
+			//working on *
+			while((s=br.readLine())!=null)
+			{
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+			}
+			while((s=br.readLine())!=null)
+			{
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+			}
+			//work on * done
+			//4
+			j=0;
+			while((s=br.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+				else
+				{
+					i=0;
+					while(i<s.length())
+					{
+						char c=s.charAt(i);
+						if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+							w=w+c;
+						else
+						{
+							if(w!="")
+			        		{
+			        			p.add(j,w);
+			       				j++;
+			       				w="";
+			       			}
+						}
+						i++;
+					}
+				}
+			}
+			System.out.println(p);
+			//5
+			j=0;
+			while((s=br.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+				else
+				{
+					i=0;
+					while(i<s.length())
+					{
+						char c=s.charAt(i);
+						if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+							w=w+c;
+						else
+						{
+							if(w!="")
+			        		{
+			        			q.add(j,w);
+			       				j++;
+			       				w="";
+			       			}
+						}
+						i++;
+					}
+				}
+			}
+			System.out.println(q);
+			//6
+			j=0;
+			while((s=br.readLine())!=null)
+			{
+				s=s.toLowerCase();
+				if(s.equals(""))
+				{
+					break;
+				}
+				else if(s.equals("************************************************************"))
+				{
+					break;
+				}
+				else
+				{
+					i=0;
+					while(i<s.length())
+					{
+						char c=s.charAt(i);
+						if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+							w=w+c;
+						else
+						{
+							if(w!="")
+			        		{
+			        			r.add(j,w);
+			       				j++;
+			       				w="";
+			       			}
+						}
+						i++;
+					}
+				}
+			}
+			System.out.println(r);
+			//8
+			if(parah==4)
+			{
+				j=0;
+				while((s=br.readLine())!=null)
+				{
+					s=s.toLowerCase();
+					if(s.equals(""))
+					{
+						break;
+					}
+					else if(s.equals("************************************************************"))
+					{
+						break;
+					}
+					else
+					{
+						i=0;
+						while(i<s.length())
+						{
+							char c=s.charAt(i);
+							if(c>=65&&c<=91 || c>=97&&c<=122 || c>=48&&c<=57)
+								w=w+c;
+							else
+							{
+								if(w!="")
+				        		{
+				        			y.add(j,w);
+				       				j++;
+				       				w="";
+				       			}
+							}
+							i++;
+						}
+					}
+				}
+				System.out.println(y);
+			}
+			//removing stop words from list
+			System.out.println();
+			System.out.println("				after removing stop words :");
+			System.out.println();
+			remove(l);
+			System.out.println(l);
+			remove(m);
+			System.out.println(m);
+			remove(n);
+			System.out.println(n);
+			remove(p);
+			System.out.println(p);
+			remove(q);
+			System.out.println(q);
+			remove(r);
+			System.out.println(r);
+			if(parah==4)
+			{
+				remove(x);
+				System.out.println(x);
+				remove(y);
+				System.out.println(y);
+			}
+			//comparison starts
+			if(parah==3)
+			{
+				int r1=comp(l,p);
+				int r2=comp(l,q);
+				int r3=comp(l,r);
+				if(r1>=r2 && r1>=r3)
+					a[0]=1;
+				else if(r2>=r1 && r2>=r3)
+					a[0]=2;
+				else
+					a[0]=3;
+			
+				r1=comp(m,p);
+				r2=comp(m,q);
+				r3=comp(m,r);
+				if(r1>=r2 && r1>=r3)
+					a[1]=1;
+				else if(r2>=r1 && r2>=r3)
+					a[1]=2;
+				else
+					a[1]=3;
+			
+				r1=comp(n,p);
+				r2=comp(n,q);
+				r3=comp(n,r);
+				if(r1>=r2 && r1>=r3)
+					a[2]=1;
+				else if(r2>=r1 && r2>=r3)
+					a[2]=2;
+				else
+					a[2]=3;
+			
+				System.out.println(a[0]+","+a[1]+","+a[2]);
+			}
+			if(parah==4)
+			{
+				int r1=comp(l,p);
+				int r2=comp(l,q);
+				int r3=comp(l,r);
+				int r4=comp(l,y);
+				if(r1>=r2 && r1>=r3 && r1>=r4)
+					a[0]=1;
+				else if(r2>=r1 && r2>=r3 && r2>=r4)
+					a[0]=2;
+				else if(r3>=r1 && r3>=r2 && r3>=r4)
+					a[0]=3;
+				else
+					a[0]=4;
+			
+				r1=comp(m,p);
+				r2=comp(m,q);
+				r3=comp(m,r);
+			    r4=comp(m,y);
+				if(r1>=r2 && r1>=r3 && r1>=r4)
+					a[1]=1;
+				else if(r2>=r1 && r2>=r3 && r2>=r4)
+					a[1]=2;
+				else if(r3>=r1 && r3>=r2 && r3>=r4)
+					a[1]=3;
+				else
+					a[1]=4;
+			
+				r1=comp(n,p);
+				r2=comp(n,q);
+				r3=comp(n,r);
+				r4=comp(n,y);
+				if(r1>=r2 && r1>=r3 && r1>=r4)
+					a[2]=1;
+				else if(r2>=r1 && r2>=r3 && r2>=r4)
+					a[2]=2;
+				else if(r3>=r1 && r3>=r2 && r3>=r4)
+					a[2]=3;
+				else
+					a[2]=4;
+				
+				r1=comp(x,p);
+				r2=comp(x,q);
+				r3=comp(x,r);
+				r4=comp(x,y);
+				if(r1>=r2 && r1>=r3 && r1>=r4)
+					a[3]=1;
+				else if(r2>=r1 && r2>=r3 && r2>=r4)
+					a[3]=2;
+				else if(r3>=r1 && r3>=r2 && r3>=r4)
+					a[3]=3;
+				else
+					a[3]=4;
+				System.out.println(a[0]+","+a[1]+","+a[2]+","+a[3]);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+	public static void remove(ArrayList l)
+	{
+		int len=l.size();
+		len--;
+		while(len>=0)
+		{
+			String a=(String)l.get(len);
+			if(a.equals("a")||a.equals("about")||a.equals("above")||a.equals("after")||a.equals("again")||a.equals("against")||a.equals("all")||a.equals("am")||a.equals("an")||a.equals("and")||a.equals("any")||a.equals("are")||a.equals("aren't")||a.equals("as")||a.equals("at")||a.equals("be")||a.equals("because")||a.equals("been")||a.equals("before")||a.equals("being")||a.equals("below")||a.equals("between")||a.equals("both")||a.equals("but")||a.equals("by")||a.equals("can't")||a.equals("cannot")||a.equals("could")||a.equals("couldn't")||a.equals("did")||a.equals("didn't")||a.equals("do")||a.equals("does")||a.equals("doesn't")||a.equals("doing")||a.equals("don't")||a.equals("down")||a.equals("during")||a.equals("each")||a.equals("few")||a.equals("for")||a.equals("from")||a.equals("further")||a.equals("had")||a.equals("hadn't")||a.equals("has")||a.equals("hasn't")||a.equals("have")||a.equals("haven't")||a.equals("having")||a.equals("he")||a.equals("he'd")||a.equals("he'll")||a.equals("he's")||a.equals("her")||a.equals("here")||a.equals("here's")||a.equals("hers")||a.equals("herself")||a.equals("him")||a.equals("himself")||a.equals("his")||a.equals("how")||a.equals("how's")||a.equals("i")||a.equals("i'd")||a.equals("i'll")||a.equals("i'm")||a.equals("i've")||a.equals("if")||a.equals("in")||a.equals("into")||a.equals("is")||a.equals("isn't")||a.equals("it")||a.equals("it's")||a.equals("its")||a.equals("itself")||a.equals("let's")||a.equals("me")||a.equals("more")||a.equals("most")||a.equals("mustn't")||a.equals("my")||a.equals("myself")||a.equals("no")||a.equals("nor")||a.equals("not")||a.equals("of")||a.equals("off")||a.equals("on")||a.equals("once")||a.equals("only")||a.equals("or")||a.equals("other")||a.equals("ought")||a.equals("our")||a.equals("ours")||a.equals("ourselves")||a.equals("out")||a.equals("over")||a.equals("own")||a.equals("same")||a.equals("shan't")||a.equals("she")||a.equals("she'd")||a.equals("she'll")||a.equals("she's")||a.equals("should")||a.equals("shouldn't")||a.equals("so")||a.equals("some")||a.equals("such")||a.equals("than")||a.equals("that")||a.equals("that's")||a.equals("the")||a.equals("their")||a.equals("theirs")||a.equals("them")||a.equals("themselves")||a.equals("then")||a.equals("there")||a.equals("there's")||a.equals("these")||a.equals("they")||a.equals("they'd")||a.equals("they'll")||a.equals("they're")||a.equals("they've")||a.equals("this")||a.equals("those")||a.equals("through")||a.equals("to")||a.equals("too")||a.equals("under")||a.equals("until")||a.equals("up")||a.equals("very")||a.equals("was")||a.equals("wasn't")||a.equals("we")||a.equals("we'd")||a.equals("we'll")||a.equals("we're")||a.equals("we've")||a.equals("were")||a.equals("weren't")||a.equals("what")||a.equals("what's")||a.equals("when")||a.equals("when's")||a.equals("where")||a.equals("where's")||a.equals("which")||a.equals("while")||a.equals("who")||a.equals("who's")||a.equals("whom")||a.equals("why")||a.equals("why's")||a.equals("with")||a.equals("won't")||a.equals("would")||a.equals("wouldn't")||a.equals("you")||a.equals("you'd")||a.equals("you'll")||a.equals("you're")||a.equals("you've")||a.equals("your")||a.equals("yours")||a.equals("yourself")||a.equals("yourselves"))
+			{
+				l.remove(a);
+			}
+			len--;
+		}
+	}
+	public static int comp(ArrayList p, ArrayList l)
+	{
+		int count=0;
+		for(int i=0;i<p.size();i++)
+		{
+			String a=(String)p.get(i);
+			for(int j=0;j<l.size();j++)
+			{
+				String b=(String)l.get(j);
+				if(a.equals(b))
+				{
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+}
